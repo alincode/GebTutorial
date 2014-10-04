@@ -8,7 +8,7 @@ import spock.lang.Stepwise
 @Stepwise
 class TestSpec extends GebReportingSpec{
 
-    def "click"(){
+    def "check Cross Browser Page link"(){
         given:
         to FrontPage
 

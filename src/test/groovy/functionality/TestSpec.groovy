@@ -1,21 +1,21 @@
 package functionality
 
 import geb.spock.GebReportingSpec
-import pages.TestPage
+import pages.CrossBrowserPage
+import pages.FrontPage
 import spock.lang.Stepwise
 
 @Stepwise
 class TestSpec extends GebReportingSpec{
 
-    def "確認Jenkins執行狀態"(){
+    def "click"(){
+        to FrontPage
+
         when:
-        to TestPage
+        item1.click(CrossBrowserPage)
 
         then:
-        waitFor("quick"){
-            println(new Date().getTimeString())
-            spockJobStatus == "成功"
-        }
+        topic3 == 'Headless Browsers'
     }
 
 }

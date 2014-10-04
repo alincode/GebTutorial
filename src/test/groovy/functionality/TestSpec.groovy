@@ -9,6 +9,7 @@ import spock.lang.Stepwise
 class TestSpec extends GebReportingSpec{
 
     def "click"(){
+        given:
         to FrontPage
 
         when:

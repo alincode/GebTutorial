@@ -10,5 +10,6 @@ class FrontPage extends Page {
 
     static content = {
         item1 { $('#sidebar li a').first() }
+        testRequired(required: false) { $('.alin')}
     }
 }

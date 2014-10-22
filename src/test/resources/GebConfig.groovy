@@ -1,5 +1,8 @@
 import org.openqa.selenium.firefox.FirefoxDriver
 import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.phantomjs.PhantomJSDriver
+import org.openqa.selenium.phantomjs.PhantomJSDriverService
+import org.openqa.selenium.remote.DesiredCapabilities
 
 driver = { new FirefoxDriver() }
 
@@ -32,5 +35,16 @@ environments {
 
     firefox {
         driver = { new FirefoxDriver()}
+    }
+
+    phantomjs {
+        DesiredCapabilities caps = new DesiredCapabilities(
+                'phantomjs.cli.args': [
+                        '--ignore-ssl-errors=true',
+                        '--ssl-protocol=any',
+                ] as String[],
+        )
+        PhantomJSDriverService.createDefaultService(caps)
+        driver = {new PhantomJSDriver(caps)}
     }
 }

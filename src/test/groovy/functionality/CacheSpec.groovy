@@ -28,4 +28,14 @@ class CacheSpec extends GebReportingSpec{
         true
     }
 
+    def "test fail"(){
+        when:
+        assert theValue2 == 1
+        value2 = 2
+        assert theValue2 == 3
+
+        then:
+        true
+    }
+
 }

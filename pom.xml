@@ -142,4 +142,15 @@
         </repository>
     </repositories>
 
+    <developers>
+        <developer>
+            <id>alincode</id>
+            <name>Ai-Lin Liou</name>
+            <email>alin.code@gmail.com</email>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
 </project>

@@ -105,7 +105,6 @@
                     </includes>
                     <systemPropertyVariables>
                         <geb.env>chrome</geb.env>
-                        <geb.build.baseUrl>http://www.gebish.org</geb.build.baseUrl>
                         <geb.build.reportsDir>target/test-reports/geb</geb.build.reportsDir>
                     </systemPropertyVariables>
                 </configuration>

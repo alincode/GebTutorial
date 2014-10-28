@@ -9,7 +9,7 @@ class FrontPage extends Page {
 
     static at = {$('#main h1').first().text() == 'What is it?' }
 
-    static url = ""
+    static url = "http://www.gebish.org"
 
     static content = {
         item1 { $('#sidebar li a').first() }

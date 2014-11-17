@@ -22,7 +22,7 @@ class CheckoutSpec extends GebReportingSpec{
 
     def '檢查第2,3本的書名'(){
         expect:
-        cartItems[1..2]*.bookName == ["Spock ebook", "Groovy ebook"]
+        cartItems(1..2)*.bookName == ["Spock ebook", "Groovy ebook"]
     }
 }
 
@@ -39,5 +39,6 @@ class CheckoutPage extends Page {
     static url = 'checkout.html'
     static content = {
         cartItems { moduleList CartRow, $("table tr").tail() } // 忽略標題列
+        cartItems { index -> moduleList CartRow, $("table tr").tail(), index }
     }
 }

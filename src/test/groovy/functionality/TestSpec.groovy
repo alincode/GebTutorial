@@ -2,7 +2,7 @@ package functionality
 
 import geb.spock.GebReportingSpec
 import pages.CrossBrowserPage
-import pages.FrontPage
+import pages.GebHomePage
 import spock.lang.Stepwise
 
 @Stepwise
@@ -10,7 +10,7 @@ class TestSpec extends GebReportingSpec{
 
     def "check Cross Browser Page link"(){
         given:
-        to FrontPage
+        to GebHomePage
 
         when:
         item1.click(CrossBrowserPage)

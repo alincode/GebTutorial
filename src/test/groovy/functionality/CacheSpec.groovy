@@ -1,7 +1,7 @@
 package functionality
 
 import geb.spock.GebReportingSpec
-import pages.FrontPage
+import pages.GebHomePage
 import spock.lang.Stepwise
 
 @Stepwise
@@ -9,7 +9,7 @@ class CacheSpec extends GebReportingSpec{
 
     def "test cache true"(){
         when:
-        to FrontPage
+        to GebHomePage
         assert theValue1 == 1
         value1 = 2
         assert theValue1 == 1

@@ -2,7 +2,7 @@ package pages
 
 import geb.Page
 
-class FrontPage extends Page {
+class GebHomePage extends Page {
 
     def value1 = 1
     def value2 = 1

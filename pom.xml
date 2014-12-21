@@ -9,8 +9,8 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <properties>
-        <geb.version>0.9.3</geb.version>
-        <selenium.version>2.41.0</selenium.version>
+        <geb.version>0.10.0</geb.version>
+        <selenium.version>2.44.0</selenium.version>
         <phantomjs.driver.version>1.1.0</phantomjs.driver.version>
         <spock.version>0.7-groovy-2.0</spock.version>
         <junit.version>4.8.1</junit.version>
@@ -35,11 +35,17 @@
             <version>${spock.version}</version>
         </dependency>
 
+        <!-- Geb -->
+        <dependency>
+            <groupId>org.gebish</groupId>
+            <artifactId>geb-core</artifactId>
+            <version>${geb.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.gebish</groupId>
             <artifactId>geb-spock</artifactId>
             <version>${geb.version}</version>
-            <scope>test</scope>
         </dependency>
 
         <dependency>

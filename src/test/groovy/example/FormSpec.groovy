@@ -127,6 +127,14 @@ class FormSpec extends GebReportingSpec{
         then:
         $("form").csvFile2 == 'C:\\fakepath\\markdown.pdf'
     }
+
+    def 'select multiple example'(){
+        when:
+        $("form").meaf = ["1", "2"]
+
+        then:
+        $('form').meaf.contains('1') && $('form').meaf.contains('2')
+    }
 }
 
 class FormPage extends Page{
